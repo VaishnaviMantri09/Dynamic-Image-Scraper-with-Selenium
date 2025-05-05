@@ -42,7 +42,7 @@ pip install -r requirements.txt
 python scraper.py
 ```
 
-## 🐳 Run with Docker (Recommended)
+## 🐳 Run with Docker (Recommended):
 
 1. **Clone the repository**
 
@@ -62,15 +62,17 @@ mkdir downloaded_images
 docker run --rm -v $(pwd)/downloaded_images:/app/downloaded_images image-scraper
 ```
 
-### 📁 Output:
+## 📁 Output:
+
 Images are saved in a folder named:
+
 
 downloaded_images/
 ├── image_001.jpg
 ├── image_002.png
 └── ...
 
-### ⚠️ Notes
+## ⚠️ Notes:
 
 - Some websites may use anti-bot measures that block headless browsers. If the script fails to load content, try using a non-headless browser for debugging.
 - This script is designed for public webpages — **do not use it to scrape content from websites without permission**.
