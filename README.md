@@ -64,7 +64,7 @@ docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
 
 ## 📁 Output
 
-Images are saved in a folder named:
+You can find the images in this folder, and they will be saved with their appropriate file extensions (.jpg, .png, etc.).
 
 ```bash
 downloaded_images/
