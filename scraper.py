@@ -84,15 +84,15 @@ def download_images_dynamic(url, folder="downloaded_images"):
 
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "img")))
 
-    # Scroll multiple times to fully load lazy images
-    # scroll_to_bottom(driver, pause_time=2, max_scrolls=30)
+    
+    
     smart_scroll_to_load_images(driver, max_attempts=100, pause_time=1.5)
 
 
-    # Wait extra time for lazy-load to render fully
+    
     time.sleep(8)
 
-    # Collect images after full scroll
+    
     seen = set()
     img_urls = extract_all_image_urls(driver, url, seen)
     bg_urls = extract_background_images(driver, url, seen)
@@ -100,7 +100,7 @@ def download_images_dynamic(url, folder="downloaded_images"):
     all_image_urls = img_urls + bg_urls
     print(f"Found {len(all_image_urls)} total images.")
 
-    # Download images with retry
+    
     for idx, img_url in enumerate(all_image_urls):
         try:
             response = requests.get(img_url, timeout=10)
@@ -119,5 +119,5 @@ def download_images_dynamic(url, folder="downloaded_images"):
 
     driver.quit()
 
-# Run
+
 download_images_dynamic("https://new.express.adobe.com/webpage/7R9jXPxVaE1e6")
