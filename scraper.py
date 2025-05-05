@@ -84,19 +84,12 @@ def download_images_dynamic(url, folder="downloaded_images"):
 
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "img")))
 
-    
-    
     smart_scroll_to_load_images(driver, max_attempts=100, pause_time=1.5)
-
-
     
     time.sleep(8)
-
-    
     seen = set()
     img_urls = extract_all_image_urls(driver, url, seen)
     bg_urls = extract_background_images(driver, url, seen)
-
     all_image_urls = img_urls + bg_urls
     print(f"Found {len(all_image_urls)} total images.")
 
@@ -116,8 +109,7 @@ def download_images_dynamic(url, folder="downloaded_images"):
                 print(f"Skipped {img_url} (Status code: {response.status_code})")
         except Exception as e:
             print(f"Failed to download {img_url}: {e}")
-
+            
     driver.quit()
-
 
 download_images_dynamic("https://new.express.adobe.com/webpage/7R9jXPxVaE1e6")
