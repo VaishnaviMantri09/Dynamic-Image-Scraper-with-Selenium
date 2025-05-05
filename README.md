@@ -2,20 +2,20 @@
 
 This Python script allows you to scrape and download **all images** (including lazy-loaded and background images) from a given webpage using Selenium and Requests.
 
-## 🚀 Features: 
+## 🚀 Features
 
 - Handles lazy-loaded images by smart scrolling
 - Extracts image sources from `src`, `data-src`, and `srcset`
 - Also captures background images from inline styles
 - Downloads all found images to a local folder
 
-## 📦 Requirements: 
+## 📦 Requirements
 
 - Python 3.7+
 - Google Chrome installed
 - ChromeDriver (managed automatically)
 
-## 🛠 Execution of Script Locally:
+## 🛠 Execution of Script Locally
 
 1. **Clone the repository**
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 python scraper.py
 ```
 
-## 🐳 Run with Docker (Recommended):
+## 🐳 Run with Docker (Recommended)
 
 1. **Clone the repository**
 
@@ -52,17 +52,17 @@ python scraper.py
 docker build -t image-scraper .
 ```
 
-4. **Make sure the downloaded_images directory exists or Docker might fail to mount it**
+3. **Make sure the downloaded_images directory exists or Docker might fail to mount it**
 ```bash
 mkdir downloaded_images
 ```
 
 5. **Run the scraper**
 ```bash
-docker run --rm -v $(pwd)/downloaded_images:/app/downloaded_images image-scraper
+docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
 ```
 
-## 📁 Output:
+## 📁 Output
 
 Images are saved in a folder named:
 
@@ -72,12 +72,12 @@ downloaded_images/
 ├── image_002.png
 └── ...
 
-## ⚠️ Notes:
+## ⚠️ Notes
 
 - Some websites may use anti-bot measures that block headless browsers. If the script fails to load content, try using a non-headless browser for debugging.
 - This script is designed for public webpages — **do not use it to scrape content from websites without permission**.
 
-### 🧭 What the Script Does
+## 🧭 What the Script Does
 
 - Opens the webpage using a **headless Chrome browser**.
 - Scrolls the page to **load all images dynamically**, including lazy-loaded content.
