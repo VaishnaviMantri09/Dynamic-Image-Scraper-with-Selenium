@@ -64,12 +64,12 @@ mkdir downloaded_images
 ```
 
 4. **Run the scraper**
-On Windows, %cd% will work in Command Prompt, while PowerShell requires $PWD.
+ On Windows, %cd% will work in Command Prompt, while PowerShell requires $PWD.
 ```bash
 docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
 ```
 
-On PowerShell, use:
+ On PowerShell, use:
 ```bash
 docker run --rm -v "${PWD}/downloaded_images:/app/downloaded_images" image-scraper
 ```
