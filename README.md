@@ -1,6 +1,12 @@
-# Dynamic Image Scraper with Selenium:
+#  🖼️ Dynamic Image Scraper with Selenium:
 
 This Python script allows you to scrape and download **all images** (including lazy-loaded and background images) from a given webpage using Selenium and Requests.
+
+## 🧭 What the Script Does
+
+- Opens the webpage using a **headless Chrome browser**.
+- Scrolls the page to **load all images dynamically**, including lazy-loaded content.
+- Extracts and downloads all unique image URLs (including background images) into a folder called `downloaded_images/`.
 
 ## 🚀 Features
 
@@ -58,8 +64,14 @@ mkdir downloaded_images
 ```
 
 4. **Run the scraper**
+On Windows, %cd% will work in Command Prompt, while PowerShell requires $PWD.
 ```bash
 docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
+```
+
+On PowerShell, use:
+```bash
+docker run --rm -v "${PWD}/downloaded_images:/app/downloaded_images" image-scraper
 ```
 
 ## 📁 Output
@@ -77,9 +89,3 @@ downloaded_images/
 
 - Some websites may use anti-bot measures that block headless browsers. If the script fails to load content, try using a non-headless browser for debugging.
 - This script is designed for public webpages — **do not use it to scrape content from websites without permission**.
-
-## 🧭 What the Script Does
-
-- Opens the webpage using a **headless Chrome browser**.
-- Scrolls the page to **load all images dynamically**, including lazy-loaded content.
-- Extracts and downloads all unique image URLs (including background images) into a folder called `downloaded_images/`.
