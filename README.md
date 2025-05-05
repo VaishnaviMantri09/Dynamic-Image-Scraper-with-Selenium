@@ -42,20 +42,25 @@ pip install -r requirements.txt
 python scraper.py
 ```
 
-## 🐳 Run with Docker (Recommended):
+## 🐳 Run with Docker (Recommended)
 
-### 1. Build the Docker image
+1. **Clone the repository**
+
+2. **Build the Docker image**
 
 ```bash
 docker build -t image-scraper .
 ```
 
-### 2. Run the scraper
+4. **Make sure the downloaded_images directory exists or Docker might fail to mount it**
+```bash
+mkdir downloaded_images
+```
 
+5. **Run the scraper**
 ```bash
 docker run --rm -v $(pwd)/downloaded_images:/app/downloaded_images image-scraper
 ```
-
 
 ### 📁 Output:
 Images are saved in a folder named:
