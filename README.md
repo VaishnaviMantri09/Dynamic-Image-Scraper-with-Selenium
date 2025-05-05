@@ -15,30 +15,34 @@ This Python script allows you to scrape and download **all images** (including l
 - Google Chrome installed
 - ChromeDriver (managed automatically)
 
-## 🛠 Execuetion of Script Locally:
+## 🛠 Execution of Script Locally:
 
-1. Create a virtual environment (optional but recommended):
+1. **Clone the repository**
+
+2. **Create a virtual environment (optional but recommended)**
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
 ```
-2. Install required packages:
+
+3. **Activate the environment**
+   
+    - Windows: `venv\Scripts\activate`
+    - Mac/Linux: `source venv/bin/activate`
+
+4. **Install required packages**
 
 ```bash
 pip install -r requirements.txt
-
 ```
-3. Run the script by passing the URL of the target webpage:
+
+5. **Run the script by passing the URL of the target webpage**
 
 ```bash
 python scraper.py
-
 ```
 
-
-## 🐳 Run with Docker (Recommended)
+## 🐳 Run with Docker (Recommended):
 
 ### 1. Build the Docker image
 
