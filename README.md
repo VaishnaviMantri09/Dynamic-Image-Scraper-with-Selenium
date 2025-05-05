@@ -57,7 +57,7 @@ docker build -t image-scraper .
 mkdir downloaded_images
 ```
 
-5. **Run the scraper**
+4. **Run the scraper**
 ```bash
 docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
 ```
@@ -66,11 +66,12 @@ docker run --rm -v %cd%\downloaded_images:/app/downloaded_images image-scraper
 
 Images are saved in a folder named:
 
-
+```bash
 downloaded_images/
 ├── image_001.jpg
 ├── image_002.png
 └── ...
+```
 
 ## ⚠️ Notes
 
