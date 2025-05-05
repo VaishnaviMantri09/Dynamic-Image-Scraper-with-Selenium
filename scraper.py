@@ -69,7 +69,7 @@ def extract_background_images(driver, base_url, seen):
                 urls.append(full_url)
     return urls
 
-def download_images_dynamic(url, folder="downloaded_images"):
+def download_images_dynamic(url, folder="/app/downloaded_images"):
     if not os.path.exists(folder):
         os.makedirs(folder)
 
@@ -109,7 +109,8 @@ def download_images_dynamic(url, folder="downloaded_images"):
                 print(f"Skipped {img_url} (Status code: {response.status_code})")
         except Exception as e:
             print(f"Failed to download {img_url}: {e}")
-            
+
     driver.quit()
 
 download_images_dynamic("https://new.express.adobe.com/webpage/7R9jXPxVaE1e6")
+
