@@ -1,0 +1,77 @@
+# Dynamic Image Scraper with Selenium:
+
+This Python script allows you to scrape and download **all images** (including lazy-loaded and background images) from a given webpage using Selenium and Requests.
+
+## 🚀 Features: 
+
+- Handles lazy-loaded images by smart scrolling
+- Extracts image sources from `src`, `data-src`, and `srcset`
+- Also captures background images from inline styles
+- Downloads all found images to a local folder
+
+---
+
+## 📦 Requirements: 
+
+- Python 3.7+
+- Google Chrome installed
+- ChromeDriver (managed automatically)
+
+## 🛠 Execuetion of Script Locally:
+
+1. Create a virtual environment (optional but recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+```
+2. Install required packages:
+
+```bash
+pip install -r requirements.txt
+
+```
+3. Run the script by passing the URL of the target webpage:
+
+```bash
+python scraper.py
+
+```
+
+
+## 🐳 Run with Docker (Recommended)
+
+### 1. Build the Docker image
+
+```bash
+docker build -t image-scraper .
+```
+
+### 2. Run the scraper
+
+```bash
+docker run --rm -v $(pwd)/downloaded_images:/app/downloaded_images image-scraper
+```
+
+
+### 📁 Output:
+Images are saved in a folder named:
+
+downloaded_images/
+├── image_001.jpg
+├── image_002.png
+└── ...
+
+### ⚠️ Notes:
+Some websites may use anti-bot measures that block headless browsers.
+
+This script is designed for public webpages — do not use it to scrape content from websites without permission.
+
+The script will:
+
+Open the webpage using a headless Chrome browser.
+
+Scroll to load all images dynamically.
+
+Extract and download all unique image URLs into a folder called downloaded_images.
