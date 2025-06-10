@@ -2,7 +2,7 @@
 
 This Python script allows you to scrape and download **all images** (including lazy-loaded and background images) from a given webpage using Selenium and Requests.
 
-## 🧭 What the Script Does
+## 🧭 What the Script Does?
 
 - Opens the webpage using a **headless Chrome browser**.
 - Scrolls the page to **load all images dynamically**, including lazy-loaded content.
