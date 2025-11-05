@@ -21,7 +21,7 @@ This Python script allows you to scrape and download **all images** (including l
 - Google Chrome installed
 - ChromeDriver (managed automatically)
 
-## 🛠 Execution of Script Locally
+## Execution of Script Locally
 
 1. **Clone the repository**
 
@@ -86,7 +86,7 @@ downloaded_images/
 └── ...
 ```
 
-## ⚠️ Notes
+## Notes
 
 - Some websites may use anti-bot measures that block headless browsers. If the script fails to load content, try using a non-headless browser for debugging.
 - This script is designed for public webpages — **do not use it to scrape content from websites without permission**.
